@@ -5,6 +5,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 ## Info
 - Daniel Shiffman, Tuesdays, 12:10pm-2:40pm
 - [All class dates](http://help.itp.nyu.edu/curriculum/registration/spring-2018-reg-info/spring-2018-class-dates-term-deadlines)
+    - **note first class is rescheduled to Friday, Jan 26, 12:10-2:40pm**
 - [Office Hours](https://itp.nyu.edu/inwiki/Signup/Shiffman)
 
 ## Mailing List
@@ -29,7 +30,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 # Schedule
 
-## Week 1 - Introduction: Make-Up Date: ***Friday, Jan 26, 12:10 - 2:40pm***
+## Week 1 - Introduction: Reschedule Date: ***Friday, Jan 26, 12:10 - 2:40pm***
 
 ## Week 2 - Build a Physics Engine, Jan 30
 
