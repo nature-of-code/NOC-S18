@@ -30,6 +30,8 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 # Schedule
 
 ## Week 1 - Introduction: Make-Up Date: ***Friday, Jan 26, 12:10 - 2:40pm***
+* [Notes and Examples](week1)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-1)
 
 ## Week 2 - Build a Physics Engine, Jan 30
 
@@ -41,7 +43,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 6 - Physics Libraries, Feb 27
 
-## Week 7 - Simulation Project Presentations 
+## Week 7 - Simulation Project Presentations
 
 ## Week 8 - Genetic Algorithms
 
