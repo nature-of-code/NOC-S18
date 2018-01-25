@@ -15,14 +15,15 @@
 * [Nature of Code Introduction](http://natureofcode.com/book/introduction/)
 * [Perlin Noise playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD)
 * [Videos I.1 - I.5](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YVljJvFRCyRM6mmF5wMPeE)
-* [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/introduction)
+* [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/introduction)
+* [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp00_introduction)
 
 ## Object Oriented Programming Review & Vectors
 * [Nature of Code Chapter 1](http://natureofcode.com/book/chapter-1-vectors/)
 * [Kadenze p5 videos](https://www.kadenze.com/courses/the-nature-of-code/info) -- Sessions 1 and 2
 * [Videos 1.1 - 1.6](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZwSmtE13iJBcoI-r4y7iEc)
-    * [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp1_vectors)
-    * [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp01_vectors)
+* [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp1_vectors)
+* [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp01_vectors)
 
 ## Assignment
 * [Sign up for class mailing list](https://groups.google.com/a/itp.nyu.edu/forum/#!forum/natureofcode)
