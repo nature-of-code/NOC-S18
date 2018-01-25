@@ -11,23 +11,6 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 ## Mailing List
 * [Nature of Code Google Group](https://groups.google.com/a/itp.nyu.edu/forum/#!forum/natureofcode)
 
-## Resources
-* [All course videos](https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=6) -- If you would like offline access to the videos and/or just prefer to watch them somewhere other than YouTube, let me know.
-* [Nature of Code Kadenze Course](https://www.kadenze.com/courses/the-nature-of-code/info)
-* [Online textbook](http://natureofcode.com/book/)
-* [p5.js code examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js)
-* [Processing (Java) code examples](https://github.com/shiffman/The-Nature-of-Code-Examples)
-* [Other ports](https://github.com/shiffman/The-Nature-of-Code-Examples/blob/master/README.md)
-* [Further Reading](http://natureofcode.com/book/further-reading/)
-* Some assignments and materials based on Mimi Yin's [Nature of Code course](https://github.com/mimiyin/Nature-of-Code-S-16/).
-
-## Related Reading and Watching
-* [Coding Math Video Series](http://www.youtube.com/user/codingmath)
-* [Generative Design with Processing](http://www.amazon.com/gp/product/1616890770/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1616890770&linkCode=as2&tag=natureofcode-20)
-* [Mathematics and Physics for Programmers](http://www.amazon.com/gp/product/1435457331/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1435457331&linkCode=as2&tag=learniproces-20)
-* [Computational Beauty of Nature](http://www.amazon.com/gp/product/0262561271/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0262561271&linkCode=as2&tag=natureofcode-20)
-* [Form and Code](http://formandcode.com/)
-
 # Schedule
 
 ## Week 1 - Introduction: Make-Up Date: ***Friday, Jan 26, 12:10 - 2:40pm***
@@ -66,3 +49,20 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
   * Attendance, participation in class discussion, and engagement in other students' projects (25%)
   * Quality of assignments (50%)
   * Final Project (25%)
+
+## Resources
+* [All course videos](https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=6) -- If you would like offline access to the videos and/or just prefer to watch them somewhere other than YouTube, let me know.
+* [Nature of Code Kadenze Course](https://www.kadenze.com/courses/the-nature-of-code/info)
+* [Online textbook](http://natureofcode.com/book/)
+* [p5.js code examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js)
+* [Processing (Java) code examples](https://github.com/shiffman/The-Nature-of-Code-Examples)
+* [Other ports](https://github.com/shiffman/The-Nature-of-Code-Examples/blob/master/README.md)
+* [Further Reading](http://natureofcode.com/book/further-reading/)
+* Some assignments and materials based on Mimi Yin's [Nature of Code course](https://github.com/mimiyin/Nature-of-Code-S-16/).
+
+## Related Reading and Watching
+* [Coding Math Video Series](http://www.youtube.com/user/codingmath)
+* [Generative Design with Processing](http://www.amazon.com/gp/product/1616890770/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1616890770&linkCode=as2&tag=natureofcode-20)
+* [Mathematics and Physics for Programmers](http://www.amazon.com/gp/product/1435457331/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1435457331&linkCode=as2&tag=learniproces-20)
+* [Computational Beauty of Nature](http://www.amazon.com/gp/product/0262561271/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0262561271&linkCode=as2&tag=natureofcode-20)
+* [Form and Code](http://formandcode.com/)
