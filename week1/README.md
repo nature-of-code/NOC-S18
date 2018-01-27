@@ -14,6 +14,7 @@
 ## Week 1 Tutorials and Resources
 It's probably not realistic for you to consume everything that is below. Pick and choose what is most helpful and useful to you. Feel free to send me feedback as what doesn't work well or you feel is missing!
 * [Video Tutorial: Local p5.js development workflow](https://www.youtube.com/watch?v=HZ4D3wDRaec)
+* [Video Tutorial: Publishing p5.js sketch with github pages](https://www.youtube.com/watch?v=8HPYsDTk17A) -- note that `gh-pages` is no longer required, you can host a github repository using the default master branch now.
 * [Video Tutorial: Random Walker p5.js](https://www.youtube.com/watch?v=l__fEY1xanY), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_52_random_walk)
 * [Video Tutorial: Random Walker with Vectors p5.js: Levy Flight](https://www.youtube.com/watch?v=bqF9w9TTfeo), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_53_random_walk_levy)
 * [Perlin Noise Videos -- mostly p5.js](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD)
