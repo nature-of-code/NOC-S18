@@ -13,6 +13,7 @@
 * Fill in the blank! __________________________
 
 ## Week 1 Tutorials and Resources
+It's probably not realistic for you to consume everything that is below. Pick and choose what is most helpful and useful to you. Feel free to send me feedback as what doesn't work well or you feel is missing!
 * [Video Tutorial: Random Walker p5.js](https://www.youtube.com/watch?v=l__fEY1xanY), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_52_random_walk)
 * [Video Tutorial: Random Walker with Vectors p5.js: Levy Flight](https://www.youtube.com/watch?v=bqF9w9TTfeo), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_53_random_walk_levy)
 * [Perlin Noise Videos -- mostly p5.js](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bgPNQAdxQZpJuJCjeOr7VD)
