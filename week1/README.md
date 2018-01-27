@@ -42,7 +42,7 @@ It's probably not realistic for you to consume everything that is below. Pick an
 * [I.5: Perlin noise walker](http://alpha.editor.p5js.org/natureofcode/sketches/SkuNg88Dx)
 
 # Week 2
-
+To get a jump on next week, start to look at the material about vectors. I'll go over some of this in class as well as introduce concepts from Chapter 2: forces.
 ## Object Oriented Programming Review & Vectors
 * [Kadenze videos: p5.js](https://www.kadenze.com/courses/the-nature-of-code/info) -- Sessions 1 and 2
 * [Nature of Code Chapter 1 text: Processing](http://natureofcode.com/book/chapter-1-vectors/)
