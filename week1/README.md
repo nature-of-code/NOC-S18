@@ -39,7 +39,7 @@
 * [I.4: Gaussian distribution](http://alpha.editor.p5js.org/natureofcode/sketches/S120y8Uwx)
 * [I.5: Perlin noise walker](http://alpha.editor.p5js.org/natureofcode/sketches/SkuNg88Dx)
 
-# Material to preview for week 2
+# Week 2
 
 ## Object Oriented Programming Review & Vectors
 * [Kadenze videos: p5.js](https://www.kadenze.com/courses/the-nature-of-code/info) -- Sessions 1 and 2
@@ -47,5 +47,3 @@
 * [Nature of Code Chapter 1 videos: Processing](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZwSmtE13iJBcoI-r4y7iEc)
 * [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp1_vectors)
 * [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp01_vectors)
-
-
