@@ -27,21 +27,21 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 6 - Physics Libraries, Feb 27
 
-## Week 7 - Simulation Project Presentations
+## Week 7 - Simulation Project Presentations, March 6
 
-## Week 8 - Genetic Algorithms
+## Week 8 - Genetic Algorithms, March 20
 
-## Week 9 - Neural Networks Part 1
+## Week 9 - Neural Networks Part 1, March 27
 
-## Week 10 - Neural Networks Part 2
+## Week 10 - Neural Networks Part 2, April 3
 
-## Week 11 - Final Project Proposals
+## Week 11 - Final Project Proposals, April 10
 
-## Week 12 - Final Project Proposals
+## Week 12 - Final Project Proposals, April 17
 
-## Week 13 - User Testing Workshop
+## Week 13 - User Testing Workshop, April 24
 
-## Week 14 - Final Project Presentations
+## Week 14 - Final Project Presentations, May 1
 
 ## Requirements
 * You are required to attend all class meetings and submit all weekly assignments and a final project.
