@@ -21,6 +21,8 @@ It's probably not realistic for you to consume everything that is below. Pick an
 ## In-class Code
 * [Noise walk trailing behind](http://alpha.editor.p5js.org/natureofcode/sketches/S15rrN0rz)
 * [Noise walk speeding up ahead](http://alpha.editor.p5js.org/natureofcode/sketches/H1u2vVAHG)
+* [OOP discussion re: Heng's assignment](http://alpha.editor.p5js.org/natureofcode/sketches/HJLOXrCSG)
+* [Physics bouncing ball example in class](http://alpha.editor.p5js.org/natureofcode/sketches/rkAwvH0rM)
 
 ## Assignment
 * [Assignment](https://github.com/shiffman/NOC-S18/wiki/Homework-2)
