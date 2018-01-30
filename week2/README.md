@@ -18,6 +18,10 @@ It's probably not realistic for you to consume everything that is below. Pick an
 * [p5.js code examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp02_forces)
 * [Attraction and repulsion coding challenge video: p5.js](https://youtu.be/OAcXnzRNiCY?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_56_attraction_repulsion)
 
+## In-class Code
+* [Noise walk trailing behind](http://alpha.editor.p5js.org/natureofcode/sketches/S15rrN0rz)
+* [Noise walk speeding up ahead](http://alpha.editor.p5js.org/natureofcode/sketches/H1u2vVAHG)
+
 ## Assignment
 * [Assignment](https://github.com/shiffman/NOC-S18/wiki/Homework-2)
 
