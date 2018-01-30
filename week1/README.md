@@ -23,6 +23,9 @@ It's probably not realistic for you to consume everything that is below. Pick an
 * [Processing code examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/introduction)
 * [p5.js code examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp00_introduction)
 
+## In-class code
+* [Walker remembering history](http://alpha.editor.p5js.org/natureofcode/sketches/S1CWf-trG)
+
 ## Assignment
 * [Sign up for class mailing list](https://groups.google.com/a/itp.nyu.edu/forum/#!forum/natureofcode)
 * [Assignment](https://github.com/shiffman/NOC-S18/wiki/Homework-1).
