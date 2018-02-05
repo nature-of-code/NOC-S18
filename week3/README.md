@@ -9,9 +9,10 @@ It's probably not realistic for you to consume everything that is below. Pick an
 * [p5.js Polar Coordinates video tutorial](https://www.youtube.com/watch?v=N633bLi_YCw)
 * [p5.js chapter 3 example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp03_oscillation)
 * [Processing chapter 3 example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp03_oscillation)
-* [Cube Wave Coding Challenge video](https://www.youtube.com/watch?v=H81Tdrmz2LA), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_86_beesandbombs), [Cube Wave demo](http://thecodingtrain.com/CodingChallenges/CC_86_beesandbombs/), [original beesandbombs GIF](https://beesandbombs.tumblr.com/post/149654056864/cube-wave)
+* [Cube Wave coding challenge video](https://www.youtube.com/watch?v=H81Tdrmz2LA), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_86_beesandbombs), [Cube Wave demo](http://thecodingtrain.com/CodingChallenges/CC_86_beesandbombs/), [original beesandbombs GIF](https://beesandbombs.tumblr.com/post/149654056864/cube-wave)
 * [GIF Loop Templates by Golan Levin](https://github.com/golanlevin/LoopTemplates)
-* ["Blobby" Coding Challenge video](https://www.youtube.com/watch?v=rX5p-QRP6R4&index=44&list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_36_Blobby), [demo](http://thecodingtrain.com/CodingChallenges/CC_36_Blobby/)
+* ["Blobby" coding challenge video](https://www.youtube.com/watch?v=rX5p-QRP6R4&index=44&list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_36_Blobby), [demo](http://thecodingtrain.com/CodingChallenges/CC_36_Blobby/)
+* [Mathematical Rose Patterns coding challenge video](https://www.youtube.com/watch?v=f5QBExMNB1I), [code](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_55_Roses_p5), [demo](http://thecodingtrain.com/CodingChallenges/CC_55_Roses_p5)
 
 ## Related works / videos
 * [Simple Harmonic Motion by Memo Akten](http://www.memo.tv/simple-harmonic-motion/)
