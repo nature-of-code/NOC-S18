@@ -1,6 +1,4 @@
-# Week 3
-
-## Week 3 Tutorials and Resources
+# Week 3 Tutorials and Resources
 It's probably not realistic for you to consume everything that is below. Pick and choose what is most helpful and useful to you. Feel free to send me feedback as what doesn't work well or you feel is missing!
 
 ### Nature of Code Chapter 3: Trigonometry and Oscillation
