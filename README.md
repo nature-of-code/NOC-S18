@@ -19,9 +19,11 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 2 - Build a Physics Engine, Jan 30
 * [Notes and Examples](week2)
-* [Homework](https://github.com/shiffman/NOC-S18/tree/master/week2)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-2)
 
 ## Week 3 - Oscillating Motion, Feb  6
+* [Notes and Examples](week3)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-3)
 
 ## Week 4 - Particle Systems, Feb 13
 
