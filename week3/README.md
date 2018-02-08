@@ -21,7 +21,8 @@ It's probably not realistic for you to consume everything that is below. Pick an
 * [Mathematics and Physics for Programmers](http://www.amazon.com/gp/product/1584503300/), Chapter 4
 
 ## In-class Code
-* coming soon
+* [Angular motion](https://alpha.editor.p5js.org/natureofcode/sketches/B1459ODUf)
+* [Polar to cartesian noise blob](https://alpha.editor.p5js.org/natureofcode/sketches/B1jn6uwUz)
 
 ## Assignment
 * [Assignment](https://github.com/shiffman/NOC-S18/wiki/Homework-3)
