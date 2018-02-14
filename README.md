@@ -26,6 +26,8 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 * [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-3)
 
 ## Week 4 - Particle Systems, Feb 13
+* [Notes and Examples](week4)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-4)
 
 ## Week 5 - Autonomous Agents, Feb 20
 
