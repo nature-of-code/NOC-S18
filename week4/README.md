@@ -12,7 +12,6 @@
 * [classes documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 * [classes and inheritance](https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906) by Maciej Rzepiński
 
-
 ### Higher-Order Functions and Arrays
 * [fill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
 * [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
@@ -33,7 +32,9 @@
 * [Particle Systems by Allen Martin](http://web.cs.wpi.edu/~matt/courses/cs563/talks/psys.html)
 
 ## In-class Code
-* coming soon. . .
+* [Array of particles with `filter()` and `for...of` loop](http://alpha.editor.p5js.org/natureofcode/sketches/B1h--jxDG)
+* [Particle System class](http://alpha.editor.p5js.org/natureofcode/sketches/BJxSm2xvf)
+* [Particles with ES6 Inheritance and Polymorphism](https://github.com/shiffman/NOC-S18/tree/master/week4/systems_3)
 
 ## Assignment
 * [Assignment](https://github.com/shiffman/NOC-S18/wiki/Homework-4)
