@@ -1,7 +1,8 @@
 # Week 4 Tutorials and Resources
 
 ### Nature of Code Chapter 4: Particle Systems
-* [Particle System tutorial video: p5.js](https://www.youtube.com/watch?v=UcdigVaIYAk), [code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_78_Simple_Particle_System_), [demo](http://thecodingtrain.com/CodingChallenges//CC_78_Simple_Particle_System)
+* [Particle System tutorial video: p5.js](https://www.youtube.com/watch?v=UcdigVaIYAk), [code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_78_Simple_Particle_System), [demo](http://thecodingtrain.com/CodingChallenges//CC_78_Simple_Particle_System)
+* [Fireworks tutorial video: p5.js](https://www.youtube.com/watch?v=CKeyIbT3vXI), [code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_27_Fireworks_2D_p5), [demo](http://thecodingtrain.com/CodingChallenges/CC_27_Fireworks_2D_p5/)
 * [Chapter 4 text: Processing](http://natureofcode.com/book/chapter-4-particle-systems/)
 * [Chapter 4 videos: Processing](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Z9hI4mSgx2FlE5w8zvjmEy)
 * [p5.js chapter 4 example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp04_systems)
