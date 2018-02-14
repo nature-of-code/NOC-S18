@@ -24,6 +24,12 @@
 * [Arrow functions video tutorial](https://www.youtube.com/watch?v=mrYMzpbFz18)
 * [Arrow functions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
+### p5 WEBGL
+* [WebGL p5 documentation](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5)
+* [texturing video tutorial](https://www.youtube.com/watch?v=O1mYw-3Wl_Q&list=PLRqwX-V7Uu6bPhi8sS1hHJ77n3zRO9FR_&index=4&t=251s)
+* [all webgl videos](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bPhi8sS1hHJ77n3zRO9FR_)
+* [particles in webgl example](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp04_systems/NOC_4_08_ParticleSystemSmoke_WEBGL)
+
 ## Supplemental Reading
 * ["Particle animation and rendering using data parallel computation", Karl Sims](http://doi.acm.org/10.1145/97879.97923) (available via NYU network/proxy)
 * ["Particle Systems, a Technique for Modeling a Class of Fuzzy Objects", Reeves](http://doi.acm.org/10.1145/357318.357320) (available via NYU network/proxy)
