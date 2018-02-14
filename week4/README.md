@@ -13,7 +13,7 @@
 * [classes and inheritance](https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906) by Maciej Rzepiński
 
 
-### Functional Arrays
+### Higher-Order Functions and Arrays
 * [fill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
 * [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 * [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
@@ -21,7 +21,7 @@
 * [and more!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * [Higher order function from Eloquent JavaScript](http://eloquentjavascript.net/05_higher_order.html)
 
-### ES6 Arrow Functions
+### ES6 Arrow Function
 * [Arrow functions video tutorial](https://www.youtube.com/watch?v=mrYMzpbFz18)
 * [Arrow functions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
