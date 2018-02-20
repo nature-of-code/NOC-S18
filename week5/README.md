@@ -7,7 +7,6 @@
 * [Chapter 6 videos: Processing](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6YHt0dtyf4uiw8tKOxQLvlW)
 * [Processing chapter 6 example code](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp06_agents)
 * [p5.js chapter 6 example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp06_agents)
-* [Homework-4: Final Project Start](https://github.com/shiffman/NOC-S17-1-Physics-Animation/wiki/Project-Step-1)
 
 ## Supplemental Reading / Viewing
 * [Reas Process Compendium](https://vimeo.com/22955812)
