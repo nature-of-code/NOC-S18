@@ -37,7 +37,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 7 - Simulation Project Presentations, March 6
 
-## Week 8 - Genetic Algorithms, March 20
+## Week 8 - Genetic Algorithms, reschedule date TBA
 
 ## Week 9 - Neural Networks Part 1, March 27
 
