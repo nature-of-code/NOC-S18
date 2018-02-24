@@ -25,4 +25,12 @@
 * [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
 
 # Web Editor Example Links
-* TBA
+* [6.1: Seeking a target](http://alpha.editor.p5js.org/natureofcode/sketches/r1imr2mdx)
+* [6.2: Arrive steering behavior](http://alpha.editor.p5js.org/natureofcode/sketches/S1jFHnQ_l)
+* [6.3: “Stay within walls” steering behavior](http://alpha.editor.p5js.org/natureofcode/sketches/ByOTB3Q_e)
+* [6.4: Flow field following](http://alpha.editor.p5js.org/natureofcode/sketches/HyDQIh7Ox)
+* [6.5: Simple path following](http://alpha.editor.p5js.org/natureofcode/sketches/HJ6uU2QOx)
+* [6.6: Path following](http://alpha.editor.p5js.org/natureofcode/sketches/Hk7CL3mOe)
+* [6.7: Group behavior: Separation](http://alpha.editor.p5js.org/natureofcode/sketches/Hk67wnQOg)
+* [6.8: Combining steering behaviors: Seek and separate](http://alpha.editor.p5js.org/natureofcode/sketches/Byr_DhXul)
+* [6.9: Flocking](http://alpha.editor.p5js.org/natureofcode/sketches/BJ12w2mOx)
