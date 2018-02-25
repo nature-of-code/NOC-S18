@@ -12,7 +12,7 @@
 ## Supplemental Reading / Viewing
 * [Reas Process Compendium](https://vimeo.com/22955812)
 * [Craig Reynolds' Steering Behaviors for Autonomous Characters](http://www.red3d.com/cwr/steer/)
-* [Braitenberg Vehicles](http://books.google.com/books/?id=7KkUAT_q_sQC)
+* [Braitenberg Vehicles](http://amzn.to/2EM5JGS)
 
 ## Finding closest point on line and dot product
 * [BetterExplained/ Dot Product + Finding The "Normal"](http://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/)
