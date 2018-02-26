@@ -31,7 +31,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 5 - Autonomous Agents, Feb 20
 * [Notes and Examples](week5)
-* Homework TBA
+* [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
 
 ## Week 6 - Physics Libraries, Feb 27
 
