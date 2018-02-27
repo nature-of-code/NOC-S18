@@ -5,7 +5,7 @@
 
 class Box {
   constructor(x, y, w, h) {
-    var options = {
+    let options = {
       friction: 0.3,
       restitution: 0.6
     }
@@ -16,8 +16,8 @@ class Box {
   }
 
   show() {
-    var pos = this.body.position;
-    var angle = this.body.angle;
+    let pos = this.body.position;
+    let angle = this.body.angle;
     push();
     translate(pos.x, pos.y);
     rotate(angle);

@@ -4,23 +4,23 @@
 // Code for: https://youtu.be/urR596FsU68
 
 // module aliases
-const Engine = Matter.Engine,
-  // Render = Matter.Render,
-  World = Matter.World,
-  Bodies = Matter.Bodies;
+const Engine = Matter.Engine;
+// Render = Matter.Render,
+const World = Matter.World;
+const Bodies = Matter.Bodies;
 
-var engine;
-var world;
-var boxes = [];
+let engine;
+let world;
+let boxes = [];
 
-var ground;
+let ground;
 
 function setup() {
   createCanvas(400, 400);
   engine = Engine.create();
   world = engine.world;
   //Engine.run(engine);
-  var options = {
+  let options = {
     isStatic: true
   }
   ground = Bodies.rectangle(200, height, width, 100, options);
@@ -40,7 +40,7 @@ function mousePressed() {
 function draw() {
   background(51);
   Engine.update(engine);
-  for (var i = 0; i < boxes.length; i++) {
+  for (let i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
   noStroke(255);
