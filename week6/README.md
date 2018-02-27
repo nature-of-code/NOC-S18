@@ -25,7 +25,7 @@
 * [Advanced Character Physics](http://www.gamasutra.com/resource_guide/20030121/jacobson_pfv.htm)
 
 ## Code from in class
-* coming soon
+* [starting point](http://alpha.editor.p5js.org/natureofcode/sketches/S1ZSAfmuz)
 
 ## Assignment
 * [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
