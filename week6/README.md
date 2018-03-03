@@ -27,7 +27,7 @@
 * Other libraries?
  ## Supplemental Reading / Viewing
 * [The Making of Nokia Friends](https://vimeo.com/1472427)
-* [Advanced Character Physics](http://www.gamasutra.com/resource_guide/20030121/jacobson_pfv.htm)
+* [Advanced Character Physics](http://www.cs.cmu.edu/afs/cs/academic/class/15462-s13/www/lec_slides/Jakobsen.pdf)
 
 ## Code from in class
 * [Matter.js Attractor](https://github.com/shiffman/NOC-S18/tree/master/week6/example_inclass)
