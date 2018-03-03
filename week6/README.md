@@ -12,9 +12,10 @@
     * [Toxiclibs video tutorials (Processing)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aiaU4s30tXvUmwGMlb9UUS)
     * [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/toxiclibs)
     * [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/toxiclibs)
-    * [Additional 2D Cloth Simulation example](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth2D)
-    * [Additional 3D Cloth Simulation example](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth3D)
-    * [Textured Cloth Simulation (flag waving)](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_63_unikitty_flag)
+    * [Toxiclibs cloth simulation video tutorial](https://www.youtube.com/watch?v=jrk_lOg_pVA)
+        * [2D Cloth Simulation example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth2D)
+        * [3D Cloth Simulation example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth3D)
+    * [Textured Cloth Simulation (flag waving) video tutorial](https://www.youtube.com/watch?v=JunJzIe0hEo), [example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_63_unikitty_flag)
     * [ToxicLibs](http://toxiclibs.org/)
     * [ToxicLibs.js](http://haptic-data.com/toxiclibsjs/)
 * Matter.js
