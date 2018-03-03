@@ -34,6 +34,8 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 * [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
 
 ## Week 6 - Physics Libraries, Feb 27
+* [Notes and Examples](week6)
+* [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
 
 ## Week 7 - Simulation Project Presentations, March 6
 
