@@ -33,7 +33,7 @@ function setup() {
   engine = Engine.create(options);
   world = engine.world;
   // Quick way to turn off default gravity
-  world.gravity.y = 0.01;
+  world.gravity.y = 0;
 
   createCanvas(640, 360);
 
@@ -52,13 +52,13 @@ function setup() {
   }
   ground = Bodies.rectangle(width / 2, height + 5, width, 10, bOptions);
   World.add(world, ground);
+  Engine.run(engine);
 
 }
 
 function draw() {
   background(200);
 
-  Engine.run(engine);
 
   // if (mouseIsPressed) {
   //   let wind = Matter.Vector.create(-0.01, 0);
