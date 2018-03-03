@@ -18,15 +18,14 @@
     * [ToxicLibs](http://toxiclibs.org/)
     * [ToxicLibs.js](http://haptic-data.com/toxiclibsjs/)
 * Matter.js
-    * [Matter.js video tutorials](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
+    * [Matter.js video tutorials (JavaScript)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
     * [p5.js example code](matterjs)
 * Bullet
     * [bRigid Processing Library](http://www.lab-eds.org/bRigid)
     * [ammo.js Javascript port](https://github.com/kripken/ammo.js/)
     * [simple 3d box demo](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp5_physicslibraries/bRigid_jBullet)
 * Other libraries?
-
-## Supplemental Reading / Viewing
+ ## Supplemental Reading / Viewing
 * [The Making of Nokia Friends](https://vimeo.com/1472427)
 * [Advanced Character Physics](http://www.gamasutra.com/resource_guide/20030121/jacobson_pfv.htm)
 
