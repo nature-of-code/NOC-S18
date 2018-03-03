@@ -4,15 +4,18 @@
 * [Chapter 5 text: Box2D and ToxicLibs with Processing](http://natureofcode.com/book/chapter-5-physics-libraries/)
 * [All videos: Box2D (Processing), toxiclibs (Processing), matter.js (p5)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh)
 * Box2D
+    * [Box2D video tutorials (Processing)][https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy4FyZtCHsZc_K0BrXzxfE]
     * [Box2D web site](http://box2d.org/)
     * [Processing box2d example code](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/box2d)
     * [p5.js box2d example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/box2d-html5)
 * Toxiclibs
+    * [Toxiclibs video tutorials (Processing)[https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aiaU4s30tXvUmwGMlb9UUS]
     * [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/toxiclibs)
     * [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/toxiclibs)
     * [ToxicLibs](http://toxiclibs.org/)
     * [ToxicLibs.js](http://haptic-data.com/toxiclibsjs/)
 * Matter.js
+    * [Matter.js video tutorials](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
     * [p5.js example code](matterjs)
 * Bullet
     * [bRigid Processing Library](http://www.lab-eds.org/bRigid)
@@ -25,7 +28,7 @@
 * [Advanced Character Physics](http://www.gamasutra.com/resource_guide/20030121/jacobson_pfv.htm)
 
 ## Code from in class
-* [starting point](http://alpha.editor.p5js.org/natureofcode/sketches/S1ZSAfmuz)
+* [Matter.js Attractor](https://github.com/shiffman/NOC-S18/tree/master/week6/example_inclass)
 
 ## Assignment
 * [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
