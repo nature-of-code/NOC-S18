@@ -23,7 +23,7 @@
 * Bullet
     * [bRigid Processing Library](http://www.lab-eds.org/bRigid)
     * [ammo.js Javascript port](https://github.com/kripken/ammo.js/)
-    * [simple 3d box demo](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp5_physicslibraries/bRigid_jBullet)
+    * [simple 3d box demo](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_physicslibraries/bRigid_jBullet/BoxTest)
 * Other libraries?
  ## Supplemental Reading / Viewing
 * [The Making of Nokia Friends](https://vimeo.com/1472427)
