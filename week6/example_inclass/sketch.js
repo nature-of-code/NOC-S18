@@ -2,9 +2,7 @@
 // Daniel Shiffman
 // http://natureofcode.com
 
-// Make the attractor a Matter Body
-// Why does this die after a while?
-// Tune it to feel less crazy
+// TODO: Make the attractor a Matter Body
 
 const Engine = Matter.Engine;
 const Bodies = Matter.Bodies;
