@@ -1,32 +1,38 @@
 # Week 6 Tutorials and Resources
 
-### Nature of Code Chapter 5: Physics Libraries
+## Nature of Code Chapter 5: Physics Libraries
 * [Chapter 5 text: Box2D and ToxicLibs with Processing](http://natureofcode.com/book/chapter-5-physics-libraries/)
 * [All videos: Box2D (Processing), toxiclibs (Processing), matter.js (p5)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh)
-* Box2D
-    * [Box2D video tutorials (Processing)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy4FyZtCHsZc_K0BrXzxfE)
-    * [Box2D web site](http://box2d.org/)
-    * [Processing box2d example code](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/box2d)
-    * [p5.js box2d example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/box2d-html5)
-* Toxiclibs
-    * [Toxiclibs video tutorials (Processing)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aiaU4s30tXvUmwGMlb9UUS)
-    * [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/toxiclibs)
-    * [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/toxiclibs)
-    * [Toxiclibs cloth simulation video tutorial](https://www.youtube.com/watch?v=jrk_lOg_pVA)
-        * [2D Cloth example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth2D)
-        * [3D Cloth example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth3D)
-    * [Toxiclibs Textured Cloth video tutorial](https://www.youtube.com/watch?v=JunJzIe0hEo), [example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_63_unikitty_flag)
-    * [ToxicLibs](http://toxiclibs.org/)
-    * [ToxicLibs.js](http://haptic-data.com/toxiclibsjs/)
-* Matter.js
-    * [Matter.js video tutorials (JavaScript)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
-    * [p5.js example code](matterjs)
-* Bullet
-    * [bRigid Processing Library](http://www.lab-eds.org/bRigid)
-    * [ammo.js Javascript port](https://github.com/kripken/ammo.js/)
-    * [simple 3d box demo](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_physicslibraries/bRigid_jBullet/BoxTest)
-* Other libraries?
- ## Supplemental Reading / Viewing
+
+### Box2D
+* [Box2D video tutorials (Processing)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy4FyZtCHsZc_K0BrXzxfE)
+* [Box2D web site](http://box2d.org/)
+* [Processing box2d example code](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/box2d)
+* [p5.js box2d example code](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/box2d-html5)
+
+### Toxiclibs
+* [Toxiclibs video tutorials (Processing)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aiaU4s30tXvUmwGMlb9UUS)
+* [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_libraries/toxiclibs)
+* [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp05_libraries/toxiclibs)
+* [Toxiclibs cloth simulation video tutorial](https://www.youtube.com/watch?v=jrk_lOg_pVA)
+   * [2D Cloth example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth2D)
+   * [3D Cloth example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_20_Cloth3D)
+* [Toxiclibs Textured Cloth video tutorial](https://www.youtube.com/watch?v=JunJzIe0hEo), [example code](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_63_unikitty_flag)
+* [ToxicLibs](http://toxiclibs.org/)
+* [ToxicLibs.js](http://haptic-data.com/toxiclibsjs/)
+
+### Matter.js
+* [Matter.js video tutorials (JavaScript)](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
+* [p5.js example code](matterjs)
+    
+### 3D Physics?
+* [bRigid Processing Library](http://www.lab-eds.org/bRigid)
+* [ammo.js Javascript port](https://github.com/kripken/ammo.js/)
+* [simple 3d box demo](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp05_physicslibraries/bRigid_jBullet/BoxTest)
+
+### Other libraries?
+
+## Supplemental Reading / Viewing
 * [The Making of Nokia Friends](https://vimeo.com/1472427)
 * [Advanced Character Physics](http://www.cs.cmu.edu/afs/cs/academic/class/15462-s13/www/lec_slides/Jakobsen.pdf)
 
