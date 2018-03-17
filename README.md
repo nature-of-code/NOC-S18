@@ -42,6 +42,8 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 ## No class Tuesday, March 20
 
 ## Week 8 - Genetic Algorithms, March 27
+* [Notes and Examples](week8)
+* Homework TBA
 
 ## Week 9 - Neural Networks, April 3
 
