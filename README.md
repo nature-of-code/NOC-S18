@@ -39,15 +39,17 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 7 - Simulation Project Presentations, March 6
 
-## Week 8 - Genetic Algorithms, reschedule date TBA
+## No class Tuesday, March 20
 
-## Week 9 - Neural Networks Part 1, March 27
+## Week 8 - Genetic Algorithms, March 27
 
-## Week 10 - Neural Networks Part 2, April 3
+## Week 9 - Neural Networks, April 3
 
-## Week 11 - Final Project Proposals, April 10
+## Week 10 - Neuro-evolution, April 10
 
-## Week 12 - Final Project Proposals, April 17
+## Week 11/12 - Final Project Proposals
+  * Regular meeting April 17
+  * Individual Final Project Meetings Friday April 20
 
 ## Week 13 - User Testing Workshop, April 24
 
