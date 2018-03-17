@@ -44,4 +44,4 @@
   * [Digital Babylon NOC 2005](http://joan.cat/en/dbn/)
 
 ## Homework
-  * [Week 2 Homework](https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/wiki/Homework-2)
+  * TBA
