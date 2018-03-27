@@ -42,13 +42,15 @@
 * [9.5: Evolution ecosystem](http://alpha.editor.p5js.org/natureofcode/sketches/r1b2jaXOx)
 
 ## Project References
-* [GA plays Flappy Bird](https://www.youtube.com/watch?v=L6bbFgjkqK0)
-* [NeuroEvolution on Autonomous Car Pathing](http://mitchvollebregt.com/neuroevolution-on-autonomous-car-pathing/)
 * [Flexible Muscle-Based Locomotion for Bipedal Creatures](https://vimeo.com/79098420)
 * [BoxCar2D](http://boxcar2d.com/)
 * [Evolved Virtual Creatures](http://www.karlsims.com/evolved-virtual-creatures.html)
 * [Ann Chen & Danne Woo - Galapagos Evolutionary Type Design NOC 2012](http://www.typegalapagos.com/)
 * [Digital Babylon NOC 2005](http://joan.cat/en/dbn/)
- 
+* [GA plays Flappy Bird](https://www.youtube.com/watch?v=L6bbFgjkqK0)
+* [NeuroEvolution on Autonomous Car Pathing](http://mitchvollebregt.com/neuroevolution-on-autonomous-car-pathing/)
+* [NeuroEvolution Snake Game](https://www.youtube.com/watch?v=BBLJFYr7zB8)
+* [NeuroEvolution Jumping Creatures](https://evobots.azurewebsites.net/)
+
 ## Homework
 * [Assignment 5](https://github.com/shiffman/NOC-S18/wiki/Homework-5)
