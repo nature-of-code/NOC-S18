@@ -31,8 +31,7 @@
 ## Code examples
   * [p5.js examples](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp09_ga)
   * [Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp09_ga)
-  * [Steering Behavior Evolution](https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week2-evolution/01_evolve_steering)
-  * [GA for Traveling Salesperson](https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/tree/master/week2-evolution/02_TSP_GA)
+  * [Steering Behavior Evolution](https://github.com/shiffman/NOC-S18/tree/master/week8/evolve_steering)
 
 ## Project References
   * [GA plays Flappy Bird](https://www.youtube.com/watch?v=L6bbFgjkqK0)
@@ -44,4 +43,4 @@
   * [Digital Babylon NOC 2005](http://joan.cat/en/dbn/)
 
 ## Homework
-  * TBA
+  * [Assignment 5](https://github.com/shiffman/NOC-S18/wiki/Homework-5)
