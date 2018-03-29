@@ -12,7 +12,7 @@ class Particle {
     this.x = x;
     this.y = y;
     this.highlight = false;
-    this.r = 4;
+    this.r = 8;
   }
 
   move() {

@@ -4,18 +4,37 @@
 
 // The old way to do intersection tests, look how slow!!
 
-let totalThings = 2000;
-
+let particleCount = 1000;
 let particles = []; // ArrayList for all "things"
 
 
+let framerateP;
+let withQuadTree;
+let total;
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 400);
 
   // Put 2000 Things in the system
-  for (let i = 0; i < totalThings; i++) {
+  for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle(random(width), random(height)));
   }
+
+  framerateP = createP('framerate: ');
+  withQuadTree = createCheckbox('using quadtree');
+  withQuadTree.checked(true);
+  let totalP = createP(particleCount);
+  total = createSlider(1, 5000, 1000);
+  total.input(function() {
+    particleCount = total.value();
+    totalP.html(particleCount);
+    while (particleCount > particles.length) {
+      particles.push(new Particle(random(width), random(height)));
+    }
+    if (particleCount < particles.length) {
+      particles.splice(0, particles.length - particleCount);
+    }
+  });
 
 }
 
@@ -37,22 +56,29 @@ function draw() {
   }
 
 
-
   for (let p of particles) {
     p.highlight = false;
+
     let range = new Circle(p.x, p.y, p.r * 2);
 
-    let points = qtree.query(range);
-    for (let point of points) {
-      let other = point.parent;
-      // As long as its not the same one
-      if (p != other) {
-        // Check to see if they are touching
-        // (We could do many other things here besides just intersection tests, such
-        // as apply forces, etc.)
-        let d = dist(p.x, p.y, other.x, other.y);
-        if (d < p.r / 2 + other.r / 2) {
-          p.highlight = true;
+    if (withQuadTree.checked()) {
+      let points = qtree.query(range);
+      for (let point of points) {
+        let other = point.userData;
+        if (p != other) {
+          let d = dist(p.x, p.y, other.x, other.y);
+          if (d < p.r / 2 + other.r / 2) {
+            p.highlight = true;
+          }
+        }
+      }
+    } else {
+      for (let other of particles) {
+        if (p != other) {
+          let d = dist(p.x, p.y, other.x, other.y);
+          if (d < p.r / 2 + other.r / 2) {
+            p.highlight = true;
+          }
         }
       }
     }
@@ -64,19 +90,11 @@ function draw() {
     p.move();
   }
 
+  let fr = floor(frameRate());
+  framerateP.html("Framerate: " + fr);
 
-  //show(qtree);
+  // show(qtree);
 
-
-
-
-
-
-  noStroke();
-  fill(0);
-  rect(0, height - 20, width, 20);
-  fill(255);
-  text("Framerate: " + floor(frameRate()), 10, height - 6);
 }
 
 function show(qtree) {
