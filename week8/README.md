@@ -42,9 +42,10 @@
 * [9.5: Evolution ecosystem](http://alpha.editor.p5js.org/natureofcode/sketches/r1b2jaXOx)
 
 ## Project References
-* [Flexible Muscle-Based Locomotion for Bipedal Creatures](https://vimeo.com/79098420)
-* [BoxCar2D](http://boxcar2d.com/)
+* [Genetic Programming Evolution of Mona Lisa](https://rogerjohansson.blog/2008/12/07/genetic-programming-evolution-of-mona-lisa/)
 * [Evolved Virtual Creatures](http://www.karlsims.com/evolved-virtual-creatures.html)
+* [BoxCar2D](http://boxcar2d.com/)
+* [Flexible Muscle-Based Locomotion for Bipedal Creatures](https://vimeo.com/79098420)
 * [Ann Chen & Danne Woo - Galapagos Evolutionary Type Design NOC 2012](http://www.typegalapagos.com/)
 * [Digital Babylon NOC 2005](http://joan.cat/en/dbn/)
 * [GA plays Flappy Bird](https://www.youtube.com/watch?v=L6bbFgjkqK0)
