@@ -17,6 +17,7 @@
 
 ## Related Reading
 * [Nature of Code Chapter 9](http://natureofcode.com/book/chapter-9-the-evolution-of-code/)
+* [Computational Beauty of Nature](https://amzn.to/2uvnmG7) Chapter 20
 * [Galanter, Philip. "The Problem with Evolutionary Art Is…"](http://philipgalanter.com/downloads/evostar2010%20-%20galanter%20-%20the%20problem%20with%20evo%20art.pdf) Paper presented at EvoCOMNET’10: The 7th European Event on the Application of Nature-inspired Techniques for Telecommunication Networks and other Parallel and Distributed Systems, April 7-9, 2010.
 * [Sims, Karl. "Artificial Evolution for Computer Graphics."](http://www.karlsims.com/papers/siggraph91.html) Paper presented at SIGGRAPH '91: The 18th Annual Conference on Computer Graphics and Interactive Techniques, Las Vegas, NV, July 28-August 2, 1991.
 * [Sims, Karl. "Evolving Virtual Creatures."](http://www.karlsims.com/papers/siggraph94.pdf) Paper presented at SIGGRAPH '94: The 21st Annual Conference on Computer Graphics and Interactive Techniques, Orlando, FL, July 24-29, 1994.
@@ -42,9 +43,10 @@
 * [9.5: Evolution ecosystem](http://alpha.editor.p5js.org/natureofcode/sketches/r1b2jaXOx)
 
 ## Project References
-* [Flexible Muscle-Based Locomotion for Bipedal Creatures](https://vimeo.com/79098420)
-* [BoxCar2D](http://boxcar2d.com/)
+* [Genetic Programming Evolution of Mona Lisa](https://rogerjohansson.blog/2008/12/07/genetic-programming-evolution-of-mona-lisa/)
 * [Evolved Virtual Creatures](http://www.karlsims.com/evolved-virtual-creatures.html)
+* [BoxCar2D](http://boxcar2d.com/)
+* [Flexible Muscle-Based Locomotion for Bipedal Creatures](https://vimeo.com/79098420)
 * [Ann Chen & Danne Woo - Galapagos Evolutionary Type Design NOC 2012](http://www.typegalapagos.com/)
 * [Digital Babylon NOC 2005](http://joan.cat/en/dbn/)
 * [GA plays Flappy Bird](https://www.youtube.com/watch?v=L6bbFgjkqK0)
