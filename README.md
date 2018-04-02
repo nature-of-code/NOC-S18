@@ -46,6 +46,8 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 * [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-5)
 
 ## Week 9 - Neural Networks, April 3
+* [Notes and Examples](week9)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-6)
 
 ## Week 10 - Neuro-evolution, April 10
 
