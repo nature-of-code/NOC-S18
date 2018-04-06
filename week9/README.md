@@ -1,5 +1,21 @@
 # Machine Learning and Neural Networks
 
+## Video Tutorials
+* [Full Coding Train Neural Network Playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh)
+* [Coding Train XOR Example](https://youtu.be/188B6k_F9jU?list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh)
+* [Coding Train Doodle Classifier Example](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zs14zKVuTuit6jApJgoYZQ)
+* [3Blue1Brown Neural Network series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+
+## p5.js examples
+* [Simple Perceptron ](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp10_nn/NOC_10_01_Perceptron)
+* [Fully Connected Neural Network (one hidden layer) library and examples](https://github.com/CodingTrain/Toy-Neural-Network-JS)
+* [Animated Network Visualization](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp10_nn/NOC_10_04_NetworkAnimation)
+
+## ml5 library
+* [ml5 website](https://ml5js.github.io/)
+* [ml5 github](https://github.com/ml5js)
+* [ml5 examples](https://github.com/ml5js/ml5-examples)
+
 ## What is a "Machine Learning"? (From [Andrew Ng's Coursera Course](https://www.coursera.org/learn/machine-learning))
 * "Field of study that gives computers the ability to learn without being explicitly programmed." -- Arthur Samuels (1959). [Self-learning and checkers](https://en.wikipedia.org/wiki/Arthur_Samuel#Computer_checkers_.28draughts.29_development).
 * "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E." -- Tom Mitchell (1998): [Maching Learning book](http://amzn.to/2nLdRgQ).
@@ -42,12 +58,6 @@ This short list thanks to Andrey Kurenkov's excellent ['Brief' History of Neural
 * [Make Your Own Neural Network](http://amzn.to/2pgOaT9) by Tariq Rashid
 * [Chapter 22 of The Computational Beauty of Nature](http://amzn.to/2oUYCjT) by Gary Flake
 
-# Code
-
-## p5.js examples
-* [Simple Perceptron ](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp10_nn/NOC_10_01_Perceptron)
-* [Fully Connected Neural Network (one hidden layer) library and examples](https://github.com/CodingTrain/Toy-Neural-Network-JS)
-* [Animated Network Visualization](https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/tree/master/chp10_nn/NOC_10_04_NetworkAnimation)
 
 ## Additional Processing examples
 * [Nature of Code Chapter 10 Processing examples](https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/chp10_nn)
@@ -57,30 +67,7 @@ This short list thanks to Andrey Kurenkov's excellent ['Brief' History of Neural
 ## Python examples
 * [Make Your Own Neural Network ](https://github.com/makeyourownneuralnetwork/makeyourownneuralnetwork/) from Tariq Rashid
 * [Abishek's Tensorflow Example](https://github.com/shekit/machine-learning-demystified/blob/master/week2/NeuralNet.ipynb)
-* [How to freeze a model and serve it with a python API](https://blog.metaflow.fr/tensorflow-how-to-freeze-a-model-and-serve-it-with-a-python-api-d4f3596b3adc)
 
-# Topics / Terms
-
-## Linear Algebra Review
-* Vectors vs. Matrices
-* "Elementwise" operations
-* Matrix multiplication
-* Transpose
-* inputs and outputs
-* weights
-
-## Terminology
-* complex adaptive system
-* perceptron
-* activation function
-* weight
-* multi-layered perceptron
-* input layer, hidden layer, output layer
-* back-propagation
-* sigmoid
-* gradient descent
-* epoch
-* deep learning
 
 ## Homework
 * [Assignment 6](https://github.com/shiffman/NOC-S18/wiki/Homework-6)

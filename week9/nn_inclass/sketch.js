@@ -52,7 +52,6 @@ function setup() {
   createCanvas(400, 400);
   // let color = colorPredictor(255, 100, 50);
 
-
   // NeuralNetwork(a, b, c)
   // a: how many inputs
   // c: how many outputs
@@ -73,22 +72,14 @@ function setup() {
   console.log(outputs[0], outputs[1]);
 
 
-
-
-
   // if (outputs[1] > outputs[0]) {
   //   console.log('use white');
   // } else {
   //   console.log('use black');
   // }
 
-
-
   // Supervised learning
   // train() function
-
-
-
 }
 
 
