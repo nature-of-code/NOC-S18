@@ -10,18 +10,18 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0);
   var a = createVector(200, 200);
   var b = createVector(50, 50);
   var c = createVector(mouseX, mouseY);
-  var r = 2;
+  var r = 20;
 
-  fill(0);
+  fill(255);
   noStroke();
   ellipse(a.x, a.y, 16);
 
   strokeWeight(1);
-  stroke(0);
+  stroke(255);
   line(a.x, a.y, b.x, b.y);
   noFill();
   ellipse(c.x, c.y, r * 2);
@@ -32,7 +32,7 @@ function draw() {
     var a = points.intersection1;
     var b = points.intersection2;
     stroke(0, 255, 0);
-    strokeWeight(4);
+    strokeWeight(8);
     if (a.onLine) {
       point(a.point.x, a.point.y);
     }
