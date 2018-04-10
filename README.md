@@ -26,22 +26,34 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 * [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-3)
 
 ## Week 4 - Particle Systems, Feb 13
+* [Notes and Examples](week4)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-4)
 
 ## Week 5 - Autonomous Agents, Feb 20
+* [Notes and Examples](week5)
+* [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
 
 ## Week 6 - Physics Libraries, Feb 27
+* [Notes and Examples](week6)
+* [Simulation Project](https://github.com/shiffman/NOC-S18/wiki/Simulation-Project)
 
 ## Week 7 - Simulation Project Presentations, March 6
 
-## Week 8 - Genetic Algorithms, March 20
+## No class Tuesday, March 20
 
-## Week 9 - Neural Networks Part 1, March 27
+## Week 8 - Genetic Algorithms, March 27
+* [Notes and Examples](week8)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-5)
 
-## Week 10 - Neural Networks Part 2, April 3
+## Week 9 - Neural Networks, April 3
+* [Notes and Examples](week9)
+* [Homework](https://github.com/shiffman/NOC-S18/wiki/Homework-6)
 
-## Week 11 - Final Project Proposals, April 10
+## Week 10 - Neuro-evolution, April 10
 
-## Week 12 - Final Project Proposals, April 17
+## Week 11/12 - Final Project Proposals
+  * Regular meeting April 17
+  * Individual Final Project Meetings Friday April 20
 
 ## Week 13 - User Testing Workshop, April 24
 
