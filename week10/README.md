@@ -1,8 +1,8 @@
 # Neuro-Evolution
 
 ## Examples
-* Flappy Bird - [code](https://github.com/shiffman/NOC-S18/tree/master/week10/neuroevolution-flappybird), [http://shiffman.github.io/NOC-S18/week10/neuroevolution-flappybird](demo)
-* Steering for "food" - [code](https://github.com/shiffman/NOC-S18/tree/master/week10/neuroevolution-steering), [http://shiffman.github.io/NOC-S18/week10/neuroevolution-steering](demo)
+* Flappy Bird - [code](https://github.com/shiffman/NOC-S18/tree/master/week10/neuroevolution-flappybird), [demo](http://shiffman.github.io/NOC-S18/week10/neuroevolution-flappybird)
+* Steering for "food" - [code](https://github.com/shiffman/NOC-S18/tree/master/week10/neuroevolution-steering), [demo](http://shiffman.github.io/NOC-S18/week10/neuroevolution-steering)
 
 ## Other NeuroEvolution examples
 * [Flappy Learning](https://github.com/xviniette/FlappyLearning) by @xviniette
