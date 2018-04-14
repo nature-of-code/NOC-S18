@@ -55,7 +55,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 
 ## Week 11/12 - Final Project Proposals
   * Regular meeting April 17
-  * Individual Final Project Meetings Friday April 20: ***[Sign up here!](https://calendar.google.com/calendar/selfsched?sstoken=UUdRTFZGSEhYSm1OfGRlZmF1bHR8MzFhNDZhNDljYTQ4ZTRlMzUzYmZiNTJiOTEwMTZhOGI)***
+  * Individual Final Project Meetings Friday April 20: ***[Sign up here!](https://calendar.google.com/calendar/selfsched?sstoken=UUVJVlVXTmdVWWRYfGRlZmF1bHR8ZDFjMzk2NDBjMjE1YjE4NTBjZTgzMTM0NzYwODcwOWQ)***
 
 ## Week 13 - User Testing Workshop, April 24
 
