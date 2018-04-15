@@ -1,6 +1,6 @@
 // Daniel Shiffman
 // Nature of Code: Intelligence and Learning
-// https://github.com/shiffman/NOC-S17-2-Intelligence-Learning
+// https://github.com/shiffman/NOC-S18
 
 // This flappy bird implementation is adapted from:
 // https://youtu.be/cXgA1d_E-jY&
@@ -55,7 +55,6 @@ function toggleState() {
   // Show the best bird
   if (runBest) {
     resetGame();
-    bestBird.score = 0;
     runBestButton.html('continue training');
     // Go train some more
   } else {
