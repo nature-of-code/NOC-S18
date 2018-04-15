@@ -5,6 +5,17 @@
 // This flappy bird implementation is adapted from:
 // https://youtu.be/cXgA1d_E-jY&
 
+// Mutation function to be passed into bird.brain
+function mutate(x) {
+  if (random(1) < 0.1) {
+    let offset = randomGaussian() * 0.5;
+    let newx = x + offset;
+    return newx;
+  } else {
+    return x;
+  }
+}
+
 class Bird {
   constructor(brain) {
     // position and size of bird
@@ -13,7 +24,7 @@ class Bird {
     this.r = 12;
 
     // Gravity, lift and velocity
-    this.gravity = 0.4;
+    this.gravity = 0.8;
     this.lift = -12;
     this.velocity = 0;
 
@@ -21,9 +32,9 @@ class Bird {
     // The Neural Network is the bird's "brain"
     if (brain instanceof NeuralNetwork) {
       this.brain = brain.copy();
-      this.brain.mutate(0.1);
+      this.brain.mutate(mutate);
     } else {
-      this.brain = new NeuralNetwork(4, 16, 2);
+      this.brain = new NeuralNetwork(5, 8, 2);
     }
 
     // Score is how many frames it's been alive
@@ -62,13 +73,16 @@ class Bird {
       // Now create the inputs to the neural network
       let inputs = [];
       // x position of closest pipe
-      inputs[0] = map(closest.x, this.x, width, -1, 1);
+      inputs[0] = map(closest.x, this.x, width, 0, 1);
       // top of closest pipe opening
-      inputs[1] = map(closest.top, 0, height, -1, 1);
+      inputs[1] = map(closest.top, 0, height, 0, 1);
       // bottom of closest pipe opening
-      inputs[2] = map(closest.bottom, 0, height, -1, 1);
+      inputs[2] = map(closest.bottom, 0, height, 0, 1);
       // bird's y position
-      inputs[3] = map(this.y, 0, height, -1, 1);
+      inputs[3] = map(this.y, 0, height, 0, 1);
+      // bird's y velocity
+      inputs[4] = map(this.velocity, -5, 5, 0, 1);
+
       // Get the outputs from the network
       let action = this.brain.predict(inputs);
       // Decide to jump or not!
@@ -83,21 +97,16 @@ class Bird {
     this.velocity += this.lift;
   }
 
+  bottomTop() {
+    // Bird dies when hits bottom?
+    return (this.y > height || this.y < 0);
+  }
+
   // Update bird's position based on velocity, gravity, etc.
   update() {
     this.velocity += this.gravity;
-    this.velocity *= 0.9;
+    // this.velocity *= 0.9;
     this.y += this.velocity;
-
-    // Keep it stuck to top or bottom
-    if (this.y > height) {
-      this.y = height;
-      this.velocity = 0;
-    }
-    if (this.y < 0) {
-      this.y = 0;
-      this.velocity = 0;
-    }
 
     // Every frame it is alive increases the score
     this.score++;

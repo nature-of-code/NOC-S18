@@ -9,7 +9,7 @@ class Pipe {
   constructor() {
 
     // How big is the empty space
-    let spacing = random(80, height / 2);
+    let spacing = 125;
     // Where is th center of the empty space
     let centery = random(spacing, height - spacing);
 
@@ -19,9 +19,9 @@ class Pipe {
     // Starts at the edge
     this.x = width;
     // Width of pipe
-    this.w = 50;
+    this.w = 80;
     // How fast
-    this.speed = 4;
+    this.speed = 6;
   }
 
   // Did this pipe hit a bird?

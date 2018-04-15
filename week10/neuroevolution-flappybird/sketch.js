@@ -6,7 +6,7 @@
 // https://youtu.be/cXgA1d_E-jY&
 
 // How big is the population
-let totalPopulation = 250;
+let totalPopulation = 500;
 // All active birds (not yet collided with pipe)
 let activeBirds = [];
 // All birds for any given population
@@ -93,6 +93,10 @@ function draw() {
           break;
         }
       }
+
+      if (bestBird.bottomTop()) {
+        resetGame();
+      }
       // Or are we running all the active birds
     } else {
       for (let i = activeBirds.length - 1; i >= 0; i--) {
@@ -100,6 +104,7 @@ function draw() {
         // Bird uses its brain!
         bird.think(pipes);
         bird.update();
+
         // Check all the pipes
         for (let j = 0; j < pipes.length; j++) {
           // It's hit a pipe
@@ -109,6 +114,11 @@ function draw() {
             break;
           }
         }
+
+        if (bird.bottomTop()) {
+          activeBirds.splice(i, 1);
+        }
+
       }
     }
 
