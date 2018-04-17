@@ -37,7 +37,7 @@ function setup() {
     population[i] = new Vehicle(width / 2, height / 2);
   }
   // Start with some food
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 25; i++) {
     food[i] = createVector(random(width), random(height));
   }
   // Start with some poison
@@ -84,7 +84,8 @@ function draw() {
       // Eat the poison (index 1)
       // v.eat(poison, 1);
       // Check boundaries
-      v.boundaries();
+      // v.boundaries();
+      v.wrap();
 
       // Update and draw
       v.update();
@@ -95,10 +96,10 @@ function draw() {
         population.splice(i, 1);
       } else {
         // Every vehicle has a chance of cloning itself
-        // let child = v.birth();
-        // if (child != null) {
-        //   population.push(child);
-        // }
+        //   let child = v.birth();
+        //   if (child != null) {
+        //     population.push(child);
+        //   }
       }
     }
 
@@ -115,9 +116,9 @@ function draw() {
 
   // Draw all the food and all the poison
   for (let i = 0; i < food.length; i++) {
-    fill(0, 255, 0);
+    fill(0, 255, 0, 200);
     noStroke();
-    ellipse(food[i].x, food[i].y, eat_threshold);
+    ellipse(food[i].x, food[i].y, eat_threshold * 2);
   }
 
   for (let i = 0; i < poison.length; i++) {

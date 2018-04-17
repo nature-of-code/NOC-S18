@@ -76,7 +76,7 @@ class NeuralNetwork {
     this.learning_rate = learning_rate;
   }
 
-  setActivationFunction(func = tanh) {
+  setActivationFunction(func = sigmoid) {
     this.activation_function = func;
   }
 

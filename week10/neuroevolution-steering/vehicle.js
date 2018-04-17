@@ -4,7 +4,8 @@
 
 // Evolutionary "Steering Behavior" Simulation
 
-let eat_threshold = 3;
+let eat_threshold = 10;
+let sensor_length = 100;
 
 class Sensor {
   constructor(pos) {
@@ -23,13 +24,13 @@ class Vehicle {
     this.position = createVector(x, y);
     this.r = 3;
     this.maxforce = 1.5;
-    this.maxspeed = 4;
+    this.maxspeed = 2;
     this.velocity.setMag(this.maxspeed);
 
     this.score = 0;
 
     this.sensors = [];
-    let radius = 50;
+    let radius = sensor_length;
     for (let i = 0; i < 360; i += 20) {
       let xoff = radius * cos(radians(i));
       let yoff = radius * sin(radians(i));
@@ -44,7 +45,7 @@ class Vehicle {
     } else {
       //let inputs = this.sensors.length*2;
       let inputs = this.sensors.length;
-      this.brain = new NeuralNetwork(inputs, 32, 2, 'tanh');
+      this.brain = new NeuralNetwork(inputs, 16, 2);
     }
 
     // Health
@@ -98,7 +99,7 @@ class Vehicle {
         let r = eat_threshold;
         let intersection = intersecting(a, b, c, r);
         if (intersection) {
-          this.sensors[j].vals[index] = map(p5.Vector.dist(a, c), 0, 50, 1, 0);
+          this.sensors[j].vals[index] = map(p5.Vector.dist(a, c), 0, sensor_length, 1, 0);
         }
       }
     }
@@ -112,8 +113,10 @@ class Vehicle {
       //i += 2;
     }
     let outputs = this.brain.predict(inputs);
-    let force = createVector(outputs[0], outputs[1]);
-    force.limit(this.maxforce);
+    let force = createVector(2 * outputs[0] - 1, 2 * outputs[1] - 1);
+    //force.limit(this.maxforce);
+    force.mult(20);
+    //console.log(force.x, force.y, force.mag());
     this.applyForce(force);
 
     // Look at everything
@@ -183,6 +186,14 @@ class Vehicle {
     stroke(255);
     ellipse(this.position.x, this.position.y, 32, 32);
   }
+
+  wrap() {
+    if (this.position.x < -this.r) this.position.x = width + this.r;
+    if (this.position.y < -this.r) this.position.y = height + this.r;
+    if (this.position.x > width + this.r) this.position.x = -this.r;
+    if (this.position.y > height + this.r) this.position.y = -this.r;
+  }
+
 
   // A force to keep it on screen
   boundaries() {
