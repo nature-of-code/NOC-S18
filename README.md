@@ -54,7 +54,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 * [Final Project Proposals](https://github.com/shiffman/NOC-S18/wiki/Project-Proposals)
 
 ## Week 11/12 - Final Project Proposals
-  * Regular meeting April 17
+  * Regular meeting April 17 for [Final Project Proposal presentations](https://github.com/shiffman/NOC-S18/wiki/Project-Proposals)
   * Individual Final Project Meetings Friday April 20: ***[Sign up here!](https://calendar.google.com/calendar/selfsched?sstoken=UUVJVlVXTmdVWWRYfGRlZmF1bHR8ZDFjMzk2NDBjMjE1YjE4NTBjZTgzMTM0NzYwODcwOWQ)***
 
 ## Week 13 - User Testing Workshop, April 24
