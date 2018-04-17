@@ -70,10 +70,10 @@ class Vehicle {
   // Return true if health is less than zero
   dead() {
     return (this.health < 0 ||
-      this.x > width + this.r ||
-      this.x < -this.r ||
-      this.y > height + this.r ||
-      this.y < -this.r
+      this.position.x > width + this.r ||
+      this.position.x < -this.r ||
+      this.position.y > height + this.r ||
+      this.position.y < -this.r
     );
   }
 
