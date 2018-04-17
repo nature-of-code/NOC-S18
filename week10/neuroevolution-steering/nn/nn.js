@@ -165,7 +165,7 @@ class NeuralNetwork {
     // This is how we adjust weights ever so slightly
     function mutate(x) {
       if (Math.random() < rate) {
-        var offset = randomGaussian() * 0.5;
+        var offset = randomGaussian() * 1;
         // var offset = random(-0.1, 0.1);
         var newx = x + offset;
         return newx;

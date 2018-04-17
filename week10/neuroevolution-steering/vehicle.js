@@ -4,8 +4,8 @@
 
 // Evolutionary "Steering Behavior" Simulation
 
-let eat_threshold = 10;
-let sensor_length = 100;
+let eat_threshold = 8;
+let sensor_length = 75;
 
 class Sensor {
   constructor(pos) {
@@ -23,15 +23,14 @@ class Vehicle {
     this.velocity = p5.Vector.random2D();
     this.position = createVector(x, y);
     this.r = 3;
-    this.maxforce = 1.5;
-    this.maxspeed = 2;
+    this.maxforce = 8;
+    this.maxspeed = 4;
     this.velocity.setMag(this.maxspeed);
-
     this.score = 0;
 
     this.sensors = [];
     let radius = sensor_length;
-    for (let i = 0; i < 360; i += 20) {
+    for (let i = 0; i < 360; i += 60) {
       let xoff = radius * cos(radians(i));
       let yoff = radius * sin(radians(i));
       let pos = createVector(xoff, yoff);
@@ -44,7 +43,7 @@ class Vehicle {
       this.brain.mutate(0.1);
     } else {
       //let inputs = this.sensors.length*2;
-      let inputs = this.sensors.length;
+      let inputs = this.sensors.length + 4;
       this.brain = new NeuralNetwork(inputs, 16, 2);
     }
 
@@ -64,13 +63,18 @@ class Vehicle {
     this.acceleration.mult(0);
 
     // Slowly die unless you eat
-    this.health -= 0.004;
+    this.health -= 0.01;
 
   }
 
   // Return true if health is less than zero
   dead() {
-    return (this.health < 0);
+    return (this.health < 0 ||
+      this.x > width + this.r ||
+      this.x < -this.r ||
+      this.y > height + this.r ||
+      this.y < -this.r
+    );
   }
 
   // Small chance of returning a new child vehicle
@@ -79,7 +83,7 @@ class Vehicle {
     if (r < prob) {
       // Same location, same DNA
       //return new Vehicle(this.position.x, this.position.y, this.brain);
-      return new Vehicle(random(width), random(height), this.brain);
+      return new Vehicle(width / 2, height / 2, this.brain);
     }
   }
 
@@ -99,25 +103,40 @@ class Vehicle {
         let r = eat_threshold;
         let intersection = intersecting(a, b, c, r);
         if (intersection) {
-          this.sensors[j].vals[index] = map(p5.Vector.dist(a, c), 0, sensor_length, 1, 0);
+          this.sensors[j].vals[index] += map(p5.Vector.dist(a, c) - r, 0, sensor_length, 1, 0);
         }
       }
     }
 
+    //let a = this.sensors.map(s => s.vals[0]);
+    //console.log(a);
+
+
     let inputs = [];
-    let i = 0;
+    inputs[0] = this.position.x / width;
+    inputs[1] = this.position.y / height;
+    inputs[2] = this.velocity.x;
+    inputs[3] = this.velocity.y;
+
+
+    //let i = 0;
     for (let j = 0; j < this.sensors.length; j++) {
-      inputs[i] = this.sensors[j].vals[0];
-      i++;
+      inputs[j + 4] = this.sensors[j].vals[0];
+      //i++;
       //inputs[i+1] = this.sensors[j].vals[1];
       //i += 2;
     }
     let outputs = this.brain.predict(inputs);
-    let force = createVector(2 * outputs[0] - 1, 2 * outputs[1] - 1);
-    //force.limit(this.maxforce);
-    force.mult(20);
+    let desired = createVector(2 * outputs[0] - 1, 2 * outputs[1] - 1);
+    //console.log(nf(desired.x, 1, 2), nf(desired.y, 1, 2));
+    //this.velocity = desired.copy();
+    // //force.limit(this.maxforce);
+    desired.mult(this.maxspeed);
+    let steer = p5.Vector.sub(desired, this.velocity);
+    // steer.limit(this.maxforce);
+    steer.limit(this.maxforce);
     //console.log(force.x, force.y, force.mag());
-    this.applyForce(force);
+    this.applyForce(steer);
 
     // Look at everything
     for (let i = list.length - 1; i >= 0; i--) {

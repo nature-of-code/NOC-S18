@@ -33,9 +33,11 @@ function setup() {
 
   // Create 10 vehicles
   angleMode(RADIANS);
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 10; i++) {
     population[i] = new Vehicle(width / 2, height / 2);
+    //food[i] = createVector(width / 2 + 25, 0);
   }
+
   // Start with some food
   for (let i = 0; i < 25; i++) {
     food[i] = createVector(random(width), random(height));
@@ -53,6 +55,10 @@ function setup() {
 
 function draw() {
   background(0);
+
+  // food[0].x = mouseX;
+  // food[0].y = mouseY;
+
   let cycles = speedSlider.value();
   speedSpan.html(cycles);
 
@@ -85,7 +91,7 @@ function draw() {
       // v.eat(poison, 1);
       // Check boundaries
       // v.boundaries();
-      v.wrap();
+      // v.wrap();
 
       // Update and draw
       v.update();
@@ -95,20 +101,19 @@ function draw() {
       if (v.dead()) {
         population.splice(i, 1);
       } else {
-        // Every vehicle has a chance of cloning itself
-        //   let child = v.birth();
-        //   if (child != null) {
-        //     population.push(child);
-        //   }
+        if (population.length < 50) {
+          //Every vehicle has a chance of cloning itself
+          let child = v.birth(0.01);
+          if (child != null) {
+            population.push(child);
+          }
+        }
       }
     }
 
-    let prob = 0.01;
-    if (population.length < 2) {
-      prob = 1;
-    }
-    let child = best.birth(prob);
-    if (child != null) {
+    //let prob = 0.05;
+    if (population.length < 3) {
+      let child = best.birth(1);
       population.push(child);
     }
   }
@@ -132,6 +137,8 @@ function draw() {
     let v = population[i];
     v.display();
   }
+
+  //noLoop();
 
 
 
