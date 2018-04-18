@@ -4,14 +4,11 @@
 
 // Evolutionary "Steering Behavior" Simulation
 
-let eat_threshold = 8;
-let sensor_angle;
-let sensor_length = 100;
 
 class Sensor {
   constructor(angle) {
     this.angle = angle;
-    this.vals = [0, 0];
+    this.val = 0;
   }
 }
 
@@ -23,25 +20,23 @@ class Vehicle {
     this.acceleration = createVector();
     this.velocity = p5.Vector.random2D();
     this.position = createVector(x, y);
-    this.r = 3;
-    this.maxforce = .1;
+    this.r = 4;
+    this.maxforce = 0.1;
     this.maxspeed = 4;
     this.velocity.setMag(this.maxspeed);
     this.score = 0;
 
+    let totalSensors = 8;
+    this.sensorAngle = TWO_PI / totalSensors;
     this.sensors = [];
-    let radius = sensor_length;
-    sensor_angle = TWO_PI / 8;
-    for (let i = 0; i < 2 * PI; i += sensor_angle) {
-      this.sensors.push(new Sensor(i));
+    for (let angle = 0; angle < TWO_PI; angle += this.sensorAngle) {
+      this.sensors.push(new Sensor(angle));
     }
-
 
     if (arguments[2] instanceof NeuralNetwork) {
       this.brain = brain.copy();
       this.brain.mutate(0.1);
     } else {
-      //let inputs = this.sensors.length*2;
       let inputs = this.sensors.length + 6;
       this.brain = new NeuralNetwork(inputs, 16, 2);
     }
@@ -68,8 +63,7 @@ class Vehicle {
 
   // Return true if health is less than zero
   dead() {
-    return (this.health < 0
-      ||
+    return (this.health < 0 ||
       this.position.x > width + this.r ||
       this.position.x < -this.r ||
       this.position.y > height + this.r ||
@@ -87,83 +81,82 @@ class Vehicle {
     }
   }
 
-  // Check against array of food or poison
-  // index = 0 for food, index = 1 for poison
-  eat(list, index) {
-
+  // Function to calculate all sensor readings
+  // And predict a "desired velocity"
+  think(list) {
+    // All sensors start with maximum length
     for (let j = 0; j < this.sensors.length; j++) {
-      this.sensors[j].vals[index] = sensor_length;
+      this.sensors[j].val = sensorLength;
     }
 
     for (let i = 0; i < list.length; i++) {
+      // Where is the food
       let otherPosition = list[i];
+      // How far away?
       let dist = p5.Vector.dist(this.position, otherPosition);
-      if (dist > sensor_length) continue;
+      // Skip if it's close
+      if (dist > sensorLength) {
+        continue;
+      }
+
+      // What's the angle of the food
       let angle = p5.Vector.sub(otherPosition, this.position).heading();
+
+      // Check all the sensors
       for (let j = 0; j < this.sensors.length; j++) {
-        let lower = this.sensors[j].angle - sensor_angle / 2;
-        let higher = this.sensors[j].angle + sensor_angle / 2;
-        // console.log(lower, angle, higher);
-        if(
-          (angle > lower && angle < higher)
-          || (angle > lower + TWO_PI && angle < higher + TWO_PI)
-          || (angle > lower - TWO_PI && angle < higher - TWO_PI)
+        // Check bounds
+        let lower = this.sensors[j].angle - this.sensorAngle / 2;
+        let higher = this.sensors[j].angle + this.sensorAngle / 2;
+        // If the relative angle of the food is in between the range
+        if (
+          (angle > lower && angle < higher) ||
+          (angle > lower + TWO_PI && angle < higher + TWO_PI) ||
+          (angle > lower - TWO_PI && angle < higher - TWO_PI)
         ) {
-          this.sensors[j].vals[0] = min(this.sensors[j].vals[0], dist);
+          // Sensor value is the closest food
+          this.sensors[j].val = min(this.sensors[j].val, dist);
         }
-        // let a = this.position;
-        // let b = p5.Vector.add(a, this.sensors[j].pos);
-        // let c = list[i];
-        // let r = eat_threshold;
-        // let intersection = intersecting(a, b, c, r);
-        // if (intersection) {
-        //   this.sensors[j].vals[index] += map(p5.Vector.dist(a, c) - r, 0, sensor_length, 1, 0);
-        // }
       }
     }
 
-    //let a = this.sensors.map(s => s.vals[0]);
-    //console.log(a);
-
-
+    // Create inputs
     let inputs = [];
+    // Position in canvas
     inputs[0] = constrain(map(this.position.x, 50, 0, 0, 1), 0, 1);
     inputs[1] = constrain(map(this.position.y, 50, 0, 0, 1), 0, 1);
     inputs[2] = constrain(map(this.position.x, width - 50, width, 0, 1), 0, 1);
     inputs[3] = constrain(map(this.position.y, height - 50, height, 0, 1), 0, 1);
+    // Current velocity
     inputs[4] = this.velocity.x / this.maxspeed;
     inputs[5] = this.velocity.y / this.maxspeed;
 
-
-    //let i = 0;
+    // All the sensor readings
     for (let j = 0; j < this.sensors.length; j++) {
-      inputs[j + 6] = map(this.sensors[j].vals[0], 0, sensor_length, 1, 0);
-      //i++;
-      //inputs[i+1] = this.sensors[j].vals[1];
-      //i += 2;
+      inputs[j + 6] = map(this.sensors[j].val, 0, sensorLength, 1, 0);
     }
+
+    // Get two outputs
     let outputs = this.brain.predict(inputs);
+    // Turn it into a desired velocity and apply steering formula
     let desired = createVector(2 * outputs[0] - 1, 2 * outputs[1] - 1);
-    //console.log(nf(desired.x, 1, 2), nf(desired.y, 1, 2));
-    //this.velocity = desired.copy();
-    // //force.limit(this.maxforce);
     desired.mult(this.maxspeed);
     let steer = p5.Vector.sub(desired, this.velocity);
     steer.limit(this.maxforce);
-    // steer.limit(this.maxforce);
-    //console.log(force.x, force.y, force.mag());
     this.applyForce(steer);
+  }
 
+  // Check against array of food or poison
+  // index = 0 for food, index = 1 for poison
+  eat(list) {
     // Look at everything
     for (let i = list.length - 1; i >= 0; i--) {
       // Calculate distance
       let d = p5.Vector.dist(list[i], this.position);
       // If we're withing 5 pixels, eat it!
-      if (d < eat_threshold) {
+      if (d < foodRadius) {
         list.splice(i, 1);
-        // Add or subtract from health based on kind of food
-        this.health += nutrition[index];
-        // this.score++;
+        // Add health when it eats food
+        this.health++;
       }
     }
   }
@@ -173,39 +166,33 @@ class Vehicle {
     this.acceleration.add(force);
   }
 
-
   display() {
 
     // Color based on health
-    let green = color(0, 255, 0);
-    let red = color(255, 0, 0);
+    let green = color(0, 255, 255, 255);
+    let red = color(255, 0, 100, 100);
     let col = lerpColor(red, green, this.health)
 
-    // Draw a triangle rotated in the direction of velocity
-    let theta = this.velocity.heading() + PI / 2;
     push();
     translate(this.position.x, this.position.y);
-
-    // Extra info
+    // Extra info for sensors
     if (debug.checked()) {
       for (let i = 0; i < this.sensors.length; i++) {
-        // if (this.sensors[i].vals[1] == 1) {
-        //   stroke(255, 0, 0);
-        // } else if (this.sensors[i].vals[0] == 1) {
-        //   stroke(0, 255, 0);
-        // } else {
-        //   stroke(255, 100);
-        // }
-        let val = this.sensors[i].vals[0];
+        let val = this.sensors[i].val;
         if (val > 0) {
-          stroke(0, 255, 0, map(this.sensors[i].vals[0], 0, sensor_length, 255, 0));
+          stroke(col);
+          strokeWeight(map(val, 0, sensorLength, 4, 0));
           let angle = this.sensors[i].angle;
-          line(0, 0, cos(angle) * sensor_length, sin(angle) * sensor_length);
+          line(0, 0, cos(angle) * val, sin(angle) * val);
         }
       }
+      noStroke();
+      fill(255, 200);
+      text(int(this.score), 10, 0);
     }
+    // Draw a triangle rotated in the direction of velocity
+    let theta = this.velocity.heading() + PI / 2;
     rotate(theta);
-
     // Draw the vehicle itself
     fill(col);
     stroke(col);
@@ -218,41 +205,8 @@ class Vehicle {
   }
 
   highlight() {
-    fill(255, 0, 255, 100);
+    fill(255, 255, 255, 50);
     stroke(255);
     ellipse(this.position.x, this.position.y, 32, 32);
-  }
-
-  wrap() {
-    if (this.position.x < -this.r) this.position.x = width + this.r;
-    if (this.position.y < -this.r) this.position.y = height + this.r;
-    if (this.position.x > width + this.r) this.position.x = -this.r;
-    if (this.position.y > height + this.r) this.position.y = -this.r;
-  }
-
-
-  // A force to keep it on screen
-  boundaries() {
-    let d = 0;
-    let desired = null;
-    if (this.position.x < d) {
-      desired = createVector(this.maxspeed, this.velocity.y);
-    } else if (this.position.x > width - d) {
-      desired = createVector(-this.maxspeed, this.velocity.y);
-    }
-
-    if (this.position.y < d) {
-      desired = createVector(this.velocity.x, this.maxspeed);
-    } else if (this.position.y > height - d) {
-      desired = createVector(this.velocity.x, -this.maxspeed);
-    }
-    //console.log(desired);
-
-    if (desired !== null) {
-      desired.setMag(this.maxspeed);
-      let steer = p5.Vector.sub(desired, this.velocity);
-      steer.limit(this.maxforce);
-      this.applyForce(steer);
-    }
   }
 }
