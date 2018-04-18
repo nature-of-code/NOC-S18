@@ -6,8 +6,8 @@
 
 
 class Sensor {
-  constructor(angle) {
-    this.angle = angle;
+  constructor(vec) {
+    this.vec = vec;
     this.val = 0;
   }
 }
@@ -30,7 +30,7 @@ class Vehicle {
     this.sensorAngle = TWO_PI / totalSensors;
     this.sensors = [];
     for (let angle = 0; angle < TWO_PI; angle += this.sensorAngle) {
-      this.sensors.push(new Sensor(angle));
+      this.sensors.push(new Sensor(p5.Vector.fromAngle(angle)));
     }
 
     if (arguments[2] instanceof NeuralNetwork) {
@@ -103,19 +103,13 @@ class Vehicle {
       }
 
       // What's the angle of the food
-      let angle = p5.Vector.sub(otherPosition, this.position).heading();
+      let toFood = p5.Vector.sub(otherPosition, this.position);
 
       // Check all the sensors
       for (let j = 0; j < this.sensors.length; j++) {
-        // Check bounds
-        let lower = this.sensors[j].angle - this.sensorAngle / 2;
-        let higher = this.sensors[j].angle + this.sensorAngle / 2;
         // If the relative angle of the food is in between the range
-        if (
-          (angle > lower && angle < higher) ||
-          (angle > lower + TWO_PI && angle < higher + TWO_PI) ||
-          (angle > lower - TWO_PI && angle < higher - TWO_PI)
-        ) {
+        let delta = this.sensors[j].vec.angleBetween(toFood);
+        if (delta < this.sensorAngle / 2) {
           // Sensor value is the closest food
           this.sensors[j].val = min(this.sensors[j].val, dist);
         }
@@ -185,8 +179,8 @@ class Vehicle {
         if (val > 0) {
           stroke(col);
           strokeWeight(map(val, 0, sensorLength, 4, 0));
-          let angle = this.sensors[i].angle;
-          line(0, 0, cos(angle) * val, sin(angle) * val);
+          let position = this.sensors[i].vec;
+          line(0, 0, position.x * val, position.y * val);
         }
       }
       noStroke();
