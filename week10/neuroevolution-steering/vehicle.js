@@ -23,6 +23,7 @@ class Vehicle {
     this.r = 4;
     this.maxforce = 0.1;
     this.maxspeed = 4;
+    this.minspeed = 1;
     this.velocity.setMag(this.maxspeed);
     this.score = 0;
 
@@ -52,6 +53,9 @@ class Vehicle {
     this.velocity.add(this.acceleration);
     // Limit speed
     this.velocity.limit(this.maxspeed);
+    if (this.velocity.mag() > this.minspeed) {
+      this.velocity.setMag(this.minspeed);
+    }
     this.position.add(this.velocity);
     // Reset acceleration to 0 each cycle
     this.acceleration.mult(0);
