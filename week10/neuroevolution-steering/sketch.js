@@ -16,10 +16,10 @@ let debug;
 let speedSlider;
 let speedSpan;
 
-let foodRadius = 4;
-let foodAmount = 50;
+let foodRadius = 8;
+let foodAmount = 25;
 
-let totalSensors = 16;
+let totalSensors = 8;
 let sensorLength = 50;
 
 
@@ -34,7 +34,7 @@ function setup() {
 
   // Create 10 vehicles
   angleMode(RADIANS);
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 20; i++) {
     population[i] = new Vehicle(width / 2, height / 2);
   }
 }
@@ -48,8 +48,8 @@ function draw() {
   let best = null;
 
   for (let n = 0; n < cycles; n++) {
-    // 10% chance of new food, always keep 25
-    while (food.length < 50) {
+    // Always keep 50 food pieces
+    while (food.length < foodAmount) {
       food.push(createVector(random(50, width - 50), random(50, height - 50)));
     }
 

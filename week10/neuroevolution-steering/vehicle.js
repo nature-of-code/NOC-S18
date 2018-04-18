@@ -130,8 +130,8 @@ class Vehicle {
     inputs[2] = constrain(map(this.position.x, width - 50, width, 0, 1), 0, 1);
     inputs[3] = constrain(map(this.position.y, height - 50, height, 0, 1), 0, 1);
     // Current velocity
-    inputs[4] = 0; //this.velocity.x / this.maxspeed;
-    inputs[5] = 0; //this.velocity.y / this.maxspeed;
+    inputs[4] = this.velocity.x / this.maxspeed;
+    inputs[5] = this.velocity.y / this.maxspeed;
 
     // All the sensor readings
     for (let j = 0; j < this.sensors.length; j++) {
