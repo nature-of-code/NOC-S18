@@ -104,7 +104,7 @@ function draw() {
     }
 
     if (population.length < 20) {
-      for(let v of population) {
+      for (let v of population) {
         //Every vehicle has a chance of cloning itself
         let child = v.birth(0.1 * v.score / record);
         if (child != null) {

@@ -68,8 +68,7 @@ class Vehicle {
 
   // Return true if health is less than zero
   dead() {
-    return (this.health < 0
-      ||
+    return (this.health < 0 ||
       this.position.x > width + this.r ||
       this.position.x < -this.r ||
       this.position.y > height + this.r ||
@@ -104,10 +103,10 @@ class Vehicle {
         let lower = this.sensors[j].angle - sensor_angle / 2;
         let higher = this.sensors[j].angle + sensor_angle / 2;
         // console.log(lower, angle, higher);
-        if(
-          (angle > lower && angle < higher)
-          || (angle > lower + TWO_PI && angle < higher + TWO_PI)
-          || (angle > lower - TWO_PI && angle < higher - TWO_PI)
+        if (
+          (angle > lower && angle < higher) ||
+          (angle > lower + TWO_PI && angle < higher + TWO_PI) ||
+          (angle > lower - TWO_PI && angle < higher - TWO_PI)
         ) {
           this.sensors[j].vals[0] = min(this.sensors[j].vals[0], dist);
         }
