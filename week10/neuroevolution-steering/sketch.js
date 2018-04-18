@@ -64,8 +64,8 @@ function draw() {
 
   for (let n = 0; n < cycles; n++) {
     // 10% chance of new food
-    if (random(1) < 0.05) {
-      food.push(createVector(random(width), random(height)));
+    if (random(1) < 0.1 || food.length < 25) {
+      food.push(createVector(random(50, width - 50), random(50, height - 50)));
     }
 
     // 1% chance of new poison
@@ -80,11 +80,6 @@ function draw() {
     for (let i = population.length - 1; i >= 0; i--) {
       let v = population[i];
 
-      if (v.score > record) {
-        record = v.score;
-        best = v;
-      }
-
       // Eat the food (index 0)
       v.eat(food, 0);
       // Eat the poison (index 1)
@@ -94,24 +89,30 @@ function draw() {
       // v.wrap();
 
       // Update and draw
-      v.update();
+      v.update(food, poison);
       // v.display();
 
       // If the vehicle has died, remove
       if (v.dead()) {
         population.splice(i, 1);
       } else {
-        if (population.length < 50) {
-          //Every vehicle has a chance of cloning itself
-          let child = v.birth(0.01);
-          if (child != null) {
-            population.push(child);
-          }
+        if (v.score > record) {
+          record = v.score;
+          best = v;
         }
       }
     }
 
-    //let prob = 0.05;
+    if (population.length < 20) {
+      for(let v of population) {
+        //Every vehicle has a chance of cloning itself
+        let child = v.birth(0.1 * v.score / record);
+        if (child != null) {
+          population.push(child);
+        }
+      }
+    }
+
     if (population.length < 3) {
       let child = best.birth(1);
       population.push(child);
@@ -137,9 +138,4 @@ function draw() {
     let v = population[i];
     v.display();
   }
-
-  //noLoop();
-
-
-
 }
