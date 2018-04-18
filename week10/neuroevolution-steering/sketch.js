@@ -15,7 +15,6 @@ let debug;
 
 let speedSlider;
 let speedSpan;
-let best = null;
 
 let foodRadius = 4;
 let foodAmount = 50;
@@ -44,21 +43,27 @@ function draw() {
   let cycles = speedSlider.value();
   speedSpan.html(cycles);
 
+  let best = null;
+
   for (let n = 0; n < cycles; n++) {
     // 10% chance of new food, always keep 25
     while (food.length < 50) {
       food.push(createVector(random(50, width - 50), random(50, height - 50)));
     }
 
-    best = null;
+    // Eat any food
+    for (let v of population) {
+      v.eat(food);
+    }
+
+    // Go through all vehicles and find the best!
     let record = -1;
-    // Go through all vehicles
     for (let i = population.length - 1; i >= 0; i--) {
       let v = population[i];
       // Eat the food (index 0)
-      v.eat(food);
       v.think(food);
       v.update(food);
+
       // If the vehicle has died, remove
       if (v.dead()) {
         population.splice(i, 1);
