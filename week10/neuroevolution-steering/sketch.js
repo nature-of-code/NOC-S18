@@ -18,7 +18,9 @@ let speedSpan;
 
 let foodRadius = 4;
 let foodAmount = 50;
-let sensorLength = 75;
+
+let totalSensors = 16;
+let sensorLength = 50;
 
 
 function setup() {

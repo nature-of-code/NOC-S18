@@ -23,11 +23,10 @@ class Vehicle {
     this.r = 4;
     this.maxforce = 0.1;
     this.maxspeed = 4;
-    this.minspeed = 1;
+    this.minspeed = 0.25;
     this.velocity.setMag(this.maxspeed);
     this.score = 0;
 
-    let totalSensors = 8;
     this.sensorAngle = TWO_PI / totalSensors;
     this.sensors = [];
     for (let angle = 0; angle < TWO_PI; angle += this.sensorAngle) {
@@ -39,7 +38,7 @@ class Vehicle {
       this.brain.mutate(0.1);
     } else {
       let inputs = this.sensors.length + 6;
-      this.brain = new NeuralNetwork(inputs, 16, 2);
+      this.brain = new NeuralNetwork(inputs, 32, 2);
     }
 
     // Health
@@ -53,7 +52,7 @@ class Vehicle {
     this.velocity.add(this.acceleration);
     // Limit speed
     this.velocity.limit(this.maxspeed);
-    if (this.velocity.mag() > this.minspeed) {
+    if (this.velocity.mag() < this.minspeed) {
       this.velocity.setMag(this.minspeed);
     }
     this.position.add(this.velocity);
@@ -131,8 +130,8 @@ class Vehicle {
     inputs[2] = constrain(map(this.position.x, width - 50, width, 0, 1), 0, 1);
     inputs[3] = constrain(map(this.position.y, height - 50, height, 0, 1), 0, 1);
     // Current velocity
-    inputs[4] = this.velocity.x / this.maxspeed;
-    inputs[5] = this.velocity.y / this.maxspeed;
+    inputs[4] = 0; //this.velocity.x / this.maxspeed;
+    inputs[5] = 0; //this.velocity.y / this.maxspeed;
 
     // All the sensor readings
     for (let j = 0; j < this.sensors.length; j++) {
@@ -199,6 +198,7 @@ class Vehicle {
     rotate(theta);
     // Draw the vehicle itself
     fill(col);
+    strokeWeight(1);
     stroke(col);
     beginShape();
     vertex(0, -this.r * 2);
