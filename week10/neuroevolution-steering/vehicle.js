@@ -4,11 +4,13 @@
 
 // Evolutionary "Steering Behavior" Simulation
 
-let eat_threshold = 3;
+let eat_threshold = 8;
+let sensor_angle;
+let sensor_length = 100;
 
 class Sensor {
-  constructor(pos) {
-    this.pos = pos;
+  constructor(angle) {
+    this.angle = angle;
     this.vals = [0, 0];
   }
 }
@@ -22,19 +24,16 @@ class Vehicle {
     this.velocity = p5.Vector.random2D();
     this.position = createVector(x, y);
     this.r = 3;
-    this.maxforce = 1.5;
+    this.maxforce = .1;
     this.maxspeed = 4;
     this.velocity.setMag(this.maxspeed);
-
     this.score = 0;
 
     this.sensors = [];
-    let radius = 50;
-    for (let i = 0; i < 360; i += 20) {
-      let xoff = radius * cos(radians(i));
-      let yoff = radius * sin(radians(i));
-      let pos = createVector(xoff, yoff);
-      this.sensors.push(new Sensor(pos));
+    let radius = sensor_length;
+    sensor_angle = TWO_PI / 8;
+    for (let i = 0; i < 2 * PI; i += sensor_angle) {
+      this.sensors.push(new Sensor(i));
     }
 
 
@@ -43,8 +42,8 @@ class Vehicle {
       this.brain.mutate(0.1);
     } else {
       //let inputs = this.sensors.length*2;
-      let inputs = this.sensors.length;
-      this.brain = new NeuralNetwork(inputs, 32, 2, 'tanh');
+      let inputs = this.sensors.length + 6;
+      this.brain = new NeuralNetwork(inputs, 16, 2);
     }
 
     // Health
@@ -63,13 +62,19 @@ class Vehicle {
     this.acceleration.mult(0);
 
     // Slowly die unless you eat
-    this.health -= 0.004;
-
+    this.health -= 0.005;
+    this.score += 1;
   }
 
   // Return true if health is less than zero
   dead() {
-    return (this.health < 0);
+    return (this.health < 0
+      ||
+      this.position.x > width + this.r ||
+      this.position.x < -this.r ||
+      this.position.y > height + this.r ||
+      this.position.y < -this.r
+    );
   }
 
   // Small chance of returning a new child vehicle
@@ -87,34 +92,67 @@ class Vehicle {
   eat(list, index) {
 
     for (let j = 0; j < this.sensors.length; j++) {
-      this.sensors[j].vals[index] = 0;
+      this.sensors[j].vals[index] = sensor_length;
     }
 
     for (let i = 0; i < list.length; i++) {
+      let otherPosition = list[i];
+      let dist = p5.Vector.dist(this.position, otherPosition);
+      if (dist > sensor_length) continue;
+      let angle = p5.Vector.sub(otherPosition, this.position).heading();
       for (let j = 0; j < this.sensors.length; j++) {
-        let a = this.position;
-        let b = p5.Vector.add(a, this.sensors[j].pos);
-        let c = list[i];
-        let r = eat_threshold;
-        let intersection = intersecting(a, b, c, r);
-        if (intersection) {
-          this.sensors[j].vals[index] = map(p5.Vector.dist(a, c), 0, 50, 1, 0);
+        let lower = this.sensors[j].angle - sensor_angle / 2;
+        let higher = this.sensors[j].angle + sensor_angle / 2;
+        // console.log(lower, angle, higher);
+        if(
+          (angle > lower && angle < higher)
+          || (angle > lower + TWO_PI && angle < higher + TWO_PI)
+          || (angle > lower - TWO_PI && angle < higher - TWO_PI)
+        ) {
+          this.sensors[j].vals[0] = min(this.sensors[j].vals[0], dist);
         }
+        // let a = this.position;
+        // let b = p5.Vector.add(a, this.sensors[j].pos);
+        // let c = list[i];
+        // let r = eat_threshold;
+        // let intersection = intersecting(a, b, c, r);
+        // if (intersection) {
+        //   this.sensors[j].vals[index] += map(p5.Vector.dist(a, c) - r, 0, sensor_length, 1, 0);
+        // }
       }
     }
 
+    //let a = this.sensors.map(s => s.vals[0]);
+    //console.log(a);
+
+
     let inputs = [];
-    let i = 0;
+    inputs[0] = constrain(map(this.position.x, 50, 0, 0, 1), 0, 1);
+    inputs[1] = constrain(map(this.position.y, 50, 0, 0, 1), 0, 1);
+    inputs[2] = constrain(map(this.position.x, width - 50, width, 0, 1), 0, 1);
+    inputs[3] = constrain(map(this.position.y, height - 50, height, 0, 1), 0, 1);
+    inputs[4] = this.velocity.x / this.maxspeed;
+    inputs[5] = this.velocity.y / this.maxspeed;
+
+
+    //let i = 0;
     for (let j = 0; j < this.sensors.length; j++) {
-      inputs[i] = this.sensors[j].vals[0];
-      i++;
+      inputs[j + 6] = map(this.sensors[j].vals[0], 0, sensor_length, 1, 0);
+      //i++;
       //inputs[i+1] = this.sensors[j].vals[1];
       //i += 2;
     }
     let outputs = this.brain.predict(inputs);
-    let force = createVector(outputs[0], outputs[1]);
-    force.limit(this.maxforce);
-    this.applyForce(force);
+    let desired = createVector(2 * outputs[0] - 1, 2 * outputs[1] - 1);
+    //console.log(nf(desired.x, 1, 2), nf(desired.y, 1, 2));
+    //this.velocity = desired.copy();
+    // //force.limit(this.maxforce);
+    desired.mult(this.maxspeed);
+    let steer = p5.Vector.sub(desired, this.velocity);
+    steer.limit(this.maxforce);
+    // steer.limit(this.maxforce);
+    //console.log(force.x, force.y, force.mag());
+    this.applyForce(steer);
 
     // Look at everything
     for (let i = list.length - 1; i >= 0; i--) {
@@ -125,7 +163,7 @@ class Vehicle {
         list.splice(i, 1);
         // Add or subtract from health based on kind of food
         this.health += nutrition[index];
-        this.score++;
+        // this.score++;
       }
     }
   }
@@ -160,8 +198,9 @@ class Vehicle {
         // }
         let val = this.sensors[i].vals[0];
         if (val > 0) {
-          stroke(0, 255, 0, map(val, 0, 1, 0, 255));
-          line(0, 0, this.sensors[i].pos.x, this.sensors[i].pos.y);
+          stroke(0, 255, 0, map(this.sensors[i].vals[0], 0, sensor_length, 255, 0));
+          let angle = this.sensors[i].angle;
+          line(0, 0, cos(angle) * sensor_length, sin(angle) * sensor_length);
         }
       }
     }
@@ -183,6 +222,14 @@ class Vehicle {
     stroke(255);
     ellipse(this.position.x, this.position.y, 32, 32);
   }
+
+  wrap() {
+    if (this.position.x < -this.r) this.position.x = width + this.r;
+    if (this.position.y < -this.r) this.position.y = height + this.r;
+    if (this.position.x > width + this.r) this.position.x = -this.r;
+    if (this.position.y > height + this.r) this.position.y = -this.r;
+  }
+
 
   // A force to keep it on screen
   boundaries() {
