@@ -25,7 +25,7 @@ class Vehicle {
     this.velocity = createVector();
     this.position = createVector(random(width), random(height));
     this.r = 4;
-    this.maxforce = 0.1;
+    this.maxforce = 0.2;
     this.maxspeed = 4;
     this.minspeed = 0.25;
     this.maxhealth = 3;
@@ -42,7 +42,8 @@ class Vehicle {
     // If a brain is passed via constructor copy it
     if (brain) {
       this.brain = brain.copy();
-      this.brain.mutate(0.1);
+      // Mutation rate is set quite high because there is no crossover
+      this.brain.mutate(0.25);
       // Otherwise make a new brain
     } else {
       // inputs are all the sensors plus position and velocity info
@@ -52,7 +53,7 @@ class Vehicle {
       this.brain = new NeuralNetwork(inputs, 32, 2);
     }
 
-    // Health keeps vehicl alive
+    // Health keeps vehicle alive
     this.health = 1;
   }
 
@@ -135,11 +136,12 @@ class Vehicle {
 
     // Create inputs
     let inputs = [];
-    // This is goofy but these 4 inputs are mapped to distance from edges
-    inputs[0] = constrain(map(this.position.x, foodBuffer, 0, 0, 1), 0, 1);
-    inputs[1] = constrain(map(this.position.y, foodBuffer, 0, 0, 1), 0, 1);
-    inputs[2] = constrain(map(this.position.x, width - foodBuffer, width, 0, 1), 0, 1);
-    inputs[3] = constrain(map(this.position.y, height - foodBuffer, height, 0, 1), 0, 1);
+    // These inputs are the location of the vehicle
+    inputs[0] = this.position.x / width;
+    inputs[1] = this.position.y / height;
+    // These inputs are the distance of the vehicle to east- and west borders
+    inputs[2] = 1 - inputs[0];
+    inputs[3] = 1 - inputs[1];
     // These inputs are the current velocity vector
     inputs[4] = this.velocity.x / this.maxspeed;
     inputs[5] = this.velocity.y / this.maxspeed;
