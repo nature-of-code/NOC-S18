@@ -61,6 +61,7 @@ Can we capture the unpredictable evolutionary and emergent properties of nature 
 * [User Testing Info / Schedule](https://github.com/shiffman/NOC-S18/wiki/User-Testing)
 
 ## Week 14 - Final Project Presentations, May 1
+* [Final Project Presentations / Documentation](https://github.com/shiffman/NOC-S18/wiki/Final-Projects)
 
 ## Requirements
 * You are required to attend all class meetings and submit all weekly assignments and a final project.
